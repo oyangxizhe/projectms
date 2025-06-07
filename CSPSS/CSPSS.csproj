@@ -1,0 +1,880 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C25489F8-4A51-47B8-B117-D016DEB71343}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CSPSS</RootNamespace>
+    <AssemblyName>项目管理系统客户端</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <StartupObject>
+    </StartupObject>
+    <ApplicationIcon>xz 200X200.ico</ApplicationIcon>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetZone>LocalIntranet</TargetZone>
+    <GenerateManifests>true</GenerateManifests>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+    <PublishUrl>D:\wwwroot\webserver\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>2F608BD459D7AEE851E16610A883C89B9D0B723E</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>CSPSS_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\Debug\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="XizheC, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\XizheC.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BASE_INFO\ARTIFICIAL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BASE_INFO\ARTIFICIAL.designer.cs">
+      <DependentUpon>ARTIFICIAL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_INFO\AUDIT_LIST.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BASE_INFO\AUDIT_LIST.designer.cs">
+      <DependentUpon>AUDIT_LIST.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_INFO\COLOR_PARAMETERS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BASE_INFO\COLOR_PARAMETERS.designer.cs">
+      <DependentUpon>COLOR_PARAMETERS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_INFO\CUSTOMER_INFO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BASE_INFO\CUSTOMER_INFO.designer.cs">
+      <DependentUpon>CUSTOMER_INFO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_INFO\CUSTOMER_INFOT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BASE_INFO\CUSTOMER_INFOT.designer.cs">
+      <DependentUpon>CUSTOMER_INFOT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_INFO\DEPART.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BASE_INFO\DEPART.designer.cs">
+      <DependentUpon>DEPART.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_INFO\DIE_CUTTING_COST.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BASE_INFO\DIE_CUTTING_COST.designer.cs">
+      <DependentUpon>DIE_CUTTING_COST.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_INFO\DOOR_PARAMETERS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BASE_INFO\DOOR_PARAMETERS.designer.cs">
+      <DependentUpon>DOOR_PARAMETERS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_INFO\DOOR_PARAMETERST.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BASE_INFO\DOOR_PARAMETERST.designer.cs">
+      <DependentUpon>DOOR_PARAMETERST.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_INFO\EMPLOYEE_INFO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BASE_INFO\EMPLOYEE_INFO.designer.cs">
+      <DependentUpon>EMPLOYEE_INFO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_INFO\LAMINATING_PROCESS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BASE_INFO\LAMINATING_PROCESS.designer.cs">
+      <DependentUpon>LAMINATING_PROCESS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_INFO\MACHINING.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BASE_INFO\MACHINING.designer.cs">
+      <DependentUpon>MACHINING.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_INFO\MACHININGT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BASE_INFO\MACHININGT.designer.cs">
+      <DependentUpon>MACHININGT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_INFO\MATERIAL_PRICE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BASE_INFO\MATERIAL_PRICE.designer.cs">
+      <DependentUpon>MATERIAL_PRICE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_INFO\NOTICE_LIST.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BASE_INFO\NOTICE_LIST.designer.cs">
+      <DependentUpon>NOTICE_LIST.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_INFO\ORDER_TYPE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BASE_INFO\ORDER_TYPE.designer.cs">
+      <DependentUpon>ORDER_TYPE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_INFO\OTHER_COST.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BASE_INFO\OTHER_COST.designer.cs">
+      <DependentUpon>OTHER_COST.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_INFO\PACK_MATERIAL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BASE_INFO\PACK_MATERIAL.designer.cs">
+      <DependentUpon>PACK_MATERIAL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_INFO\PAPER_CORE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BASE_INFO\PAPER_CORE.designer.cs">
+      <DependentUpon>PAPER_CORE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_INFO\PAPER_CORET.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BASE_INFO\PAPER_CORET.designer.cs">
+      <DependentUpon>PAPER_CORET.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_INFO\PARTS_AUXILIARY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BASE_INFO\PARTS_AUXILIARY.designer.cs">
+      <DependentUpon>PARTS_AUXILIARY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_INFO\PORTRAY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BASE_INFO\PORTRAY.designer.cs">
+      <DependentUpon>PORTRAY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_INFO\POSITION.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BASE_INFO\POSITION.designer.cs">
+      <DependentUpon>POSITION.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_INFO\PRIMARY_COLORS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BASE_INFO\PRIMARY_COLORS.designer.cs">
+      <DependentUpon>PRIMARY_COLORS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_INFO\PRINTING_TYPE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BASE_INFO\PRINTING_TYPE.designer.cs">
+      <DependentUpon>PRINTING_TYPE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_INFO\PRINTING_TYPET.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BASE_INFO\PRINTING_TYPET.designer.cs">
+      <DependentUpon>PRINTING_TYPET.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_INFO\PRINT_OPTION.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BASE_INFO\PRINT_OPTION.designer.cs">
+      <DependentUpon>PRINT_OPTION.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_INFO\PROCESSING_TECHNOLOGY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BASE_INFO\PROCESSING_TECHNOLOGY.designer.cs">
+      <DependentUpon>PROCESSING_TECHNOLOGY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_INFO\PROCESSING_TECHNOLOGYT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BASE_INFO\PROCESSING_TECHNOLOGYT.designer.cs">
+      <DependentUpon>PROCESSING_TECHNOLOGYT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_INFO\PURCHASE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BASE_INFO\PURCHASE.designer.cs">
+      <DependentUpon>PURCHASE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_INFO\SHOW_IMAGE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BASE_INFO\SHOW_IMAGE.designer.cs">
+      <DependentUpon>SHOW_IMAGE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_INFO\SUN_SCREEN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BASE_INFO\SUN_SCREEN.designer.cs">
+      <DependentUpon>SUN_SCREEN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_INFO\SURFACE_PROCESSING.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BASE_INFO\SURFACE_PROCESSING.designer.cs">
+      <DependentUpon>SURFACE_PROCESSING.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_INFO\TEMP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BASE_INFO\TEMP.designer.cs">
+      <DependentUpon>TEMP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_INFO\TISSUE_SPEC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BASE_INFO\TISSUE_SPEC.designer.cs">
+      <DependentUpon>TISSUE_SPEC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_INFO\TISSUE_SPECT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BASE_INFO\TISSUE_SPECT.designer.cs">
+      <DependentUpon>TISSUE_SPECT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_INFO\TRANSPORT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BASE_INFO\TRANSPORT.designer.cs">
+      <DependentUpon>TRANSPORT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_INFO\UNIT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BASE_INFO\UNIT.designer.cs">
+      <DependentUpon>UNIT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_INFO\UPLOADFILE_DOMAIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BASE_INFO\UPLOADFILE_DOMAIN.designer.cs">
+      <DependentUpon>UPLOADFILE_DOMAIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dgvInfo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="dgvInfo.designer.cs">
+      <DependentUpon>dgvInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOADING.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOADING.designer.cs">
+      <DependentUpon>LOADING.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOGIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOGIN.designer.cs">
+      <DependentUpon>LOGIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAIN.designer.cs">
+      <DependentUpon>MAIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OFFER_MANAGE\COST_TOTAL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OFFER_MANAGE\COST_TOTAL.designer.cs">
+      <DependentUpon>COST_TOTAL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OFFER_MANAGE\PRINTING_OFFER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OFFER_MANAGE\PRINTING_OFFER.designer.cs">
+      <DependentUpon>PRINTING_OFFER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OFFER_MANAGE\PRINTING_OFFERT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OFFER_MANAGE\PRINTING_OFFERT.designer.cs">
+      <DependentUpon>PRINTING_OFFERT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OFFER_MANAGE\PROJECT_INFO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OFFER_MANAGE\PROJECT_INFO.designer.cs">
+      <DependentUpon>PROJECT_INFO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OFFER_MANAGE\PROJECT_INFOT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OFFER_MANAGE\PROJECT_INFOT.designer.cs">
+      <DependentUpon>PROJECT_INFOT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OFFER_MANAGE\SAMPLE_RELY_LIST.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OFFER_MANAGE\SAMPLE_RELY_LIST.designer.cs">
+      <DependentUpon>SAMPLE_RELY_LIST.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OFFER_MANAGE\SAMPLE_RELY_LISTT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OFFER_MANAGE\SAMPLE_RELY_LISTT.designer.cs">
+      <DependentUpon>SAMPLE_RELY_LISTT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORDER_MANAGE\INVENTORY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ORDER_MANAGE\INVENTORY.designer.cs">
+      <DependentUpon>INVENTORY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORDER_MANAGE\INVENTORYT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ORDER_MANAGE\INVENTORYT.designer.cs">
+      <DependentUpon>INVENTORYT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORDER_MANAGE\INVOICE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ORDER_MANAGE\INVOICE.designer.cs">
+      <DependentUpon>INVOICE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORDER_MANAGE\INVOICET.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ORDER_MANAGE\INVOICET.designer.cs">
+      <DependentUpon>INVOICET.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORDER_MANAGE\INVOICE_AND_RECEIVABLE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ORDER_MANAGE\INVOICE_AND_RECEIVABLE.designer.cs">
+      <DependentUpon>INVOICE_AND_RECEIVABLE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORDER_MANAGE\NO_PAPER_OFFER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ORDER_MANAGE\NO_PAPER_OFFER.designer.cs">
+      <DependentUpon>NO_PAPER_OFFER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORDER_MANAGE\NO_PAPER_OFFERT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ORDER_MANAGE\NO_PAPER_OFFERT.designer.cs">
+      <DependentUpon>NO_PAPER_OFFERT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORDER_MANAGE\PN_PRODUCTION_INSTRUCTIONS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ORDER_MANAGE\PN_PRODUCTION_INSTRUCTIONS.designer.cs">
+      <DependentUpon>PN_PRODUCTION_INSTRUCTIONS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORDER_MANAGE\PN_PRODUCTION_INSTRUCTIONST.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ORDER_MANAGE\PN_PRODUCTION_INSTRUCTIONST.designer.cs">
+      <DependentUpon>PN_PRODUCTION_INSTRUCTIONST.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORDER_MANAGE\RECEIVABLE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ORDER_MANAGE\RECEIVABLE.designer.cs">
+      <DependentUpon>RECEIVABLE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORDER_MANAGE\RECEIVABLET.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ORDER_MANAGE\RECEIVABLET.designer.cs">
+      <DependentUpon>RECEIVABLET.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORDER_MANAGE\SALES_AND_INVOICE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ORDER_MANAGE\SALES_AND_INVOICE.designer.cs">
+      <DependentUpon>SALES_AND_INVOICE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resource1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceReference1\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="USER_MANAGE\EDIT_PWD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="USER_MANAGE\EDIT_PWD.designer.cs">
+      <DependentUpon>EDIT_PWD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="USER_MANAGE\EDIT_RIGHT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="USER_MANAGE\EDIT_RIGHT.designer.cs">
+      <DependentUpon>EDIT_RIGHT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="USER_MANAGE\LOGIN_INFO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="USER_MANAGE\LOGIN_INFO.designer.cs">
+      <DependentUpon>LOGIN_INFO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="USER_MANAGE\USER_INFO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="USER_MANAGE\USER_INFO.designer.cs">
+      <DependentUpon>USER_INFO.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BASE_INFO\ARTIFICIAL.resx">
+      <DependentUpon>ARTIFICIAL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BASE_INFO\AUDIT_LIST.resx">
+      <DependentUpon>AUDIT_LIST.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BASE_INFO\COLOR_PARAMETERS.resx">
+      <DependentUpon>COLOR_PARAMETERS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BASE_INFO\CUSTOMER_INFO.resx">
+      <DependentUpon>CUSTOMER_INFO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BASE_INFO\CUSTOMER_INFOT.resx">
+      <DependentUpon>CUSTOMER_INFOT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BASE_INFO\DEPART.resx">
+      <DependentUpon>DEPART.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BASE_INFO\DIE_CUTTING_COST.resx">
+      <DependentUpon>DIE_CUTTING_COST.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BASE_INFO\DOOR_PARAMETERS.resx">
+      <DependentUpon>DOOR_PARAMETERS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BASE_INFO\DOOR_PARAMETERST.resx">
+      <DependentUpon>DOOR_PARAMETERST.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BASE_INFO\EMPLOYEE_INFO.resx">
+      <DependentUpon>EMPLOYEE_INFO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BASE_INFO\LAMINATING_PROCESS.resx">
+      <DependentUpon>LAMINATING_PROCESS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BASE_INFO\MACHINING.resx">
+      <DependentUpon>MACHINING.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BASE_INFO\MACHININGT.resx">
+      <DependentUpon>MACHININGT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BASE_INFO\MATERIAL_PRICE.resx">
+      <DependentUpon>MATERIAL_PRICE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BASE_INFO\NOTICE_LIST.resx">
+      <DependentUpon>NOTICE_LIST.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BASE_INFO\ORDER_TYPE.resx">
+      <DependentUpon>ORDER_TYPE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BASE_INFO\OTHER_COST.resx">
+      <DependentUpon>OTHER_COST.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BASE_INFO\PACK_MATERIAL.resx">
+      <DependentUpon>PACK_MATERIAL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BASE_INFO\PAPER_CORE.resx">
+      <DependentUpon>PAPER_CORE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BASE_INFO\PAPER_CORET.resx">
+      <DependentUpon>PAPER_CORET.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BASE_INFO\PARTS_AUXILIARY.resx">
+      <DependentUpon>PARTS_AUXILIARY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BASE_INFO\PORTRAY.resx">
+      <DependentUpon>PORTRAY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BASE_INFO\POSITION.resx">
+      <DependentUpon>POSITION.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BASE_INFO\PRIMARY_COLORS.resx">
+      <DependentUpon>PRIMARY_COLORS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BASE_INFO\PRINTING_TYPE.resx">
+      <DependentUpon>PRINTING_TYPE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BASE_INFO\PRINTING_TYPET.resx">
+      <DependentUpon>PRINTING_TYPET.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BASE_INFO\PRINT_OPTION.resx">
+      <DependentUpon>PRINT_OPTION.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BASE_INFO\PROCESSING_TECHNOLOGY.resx">
+      <DependentUpon>PROCESSING_TECHNOLOGY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BASE_INFO\PROCESSING_TECHNOLOGYT.resx">
+      <DependentUpon>PROCESSING_TECHNOLOGYT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BASE_INFO\PURCHASE.resx">
+      <DependentUpon>PURCHASE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BASE_INFO\SHOW_IMAGE.resx">
+      <DependentUpon>SHOW_IMAGE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BASE_INFO\SUN_SCREEN.resx">
+      <DependentUpon>SUN_SCREEN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BASE_INFO\SURFACE_PROCESSING.resx">
+      <DependentUpon>SURFACE_PROCESSING.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BASE_INFO\TEMP.resx">
+      <DependentUpon>TEMP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BASE_INFO\TISSUE_SPEC.resx">
+      <DependentUpon>TISSUE_SPEC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BASE_INFO\TISSUE_SPECT.resx">
+      <DependentUpon>TISSUE_SPECT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BASE_INFO\TRANSPORT.resx">
+      <DependentUpon>TRANSPORT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BASE_INFO\UNIT.resx">
+      <DependentUpon>UNIT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BASE_INFO\UPLOADFILE_DOMAIN.resx">
+      <DependentUpon>UPLOADFILE_DOMAIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dgvInfo.resx">
+      <DependentUpon>dgvInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOADING.resx">
+      <DependentUpon>LOADING.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOGIN.resx">
+      <DependentUpon>LOGIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAIN.resx">
+      <DependentUpon>MAIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OFFER_MANAGE\COST_TOTAL.resx">
+      <DependentUpon>COST_TOTAL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OFFER_MANAGE\PRINTING_OFFER.resx">
+      <DependentUpon>PRINTING_OFFER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OFFER_MANAGE\PRINTING_OFFERT.resx">
+      <DependentUpon>PRINTING_OFFERT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OFFER_MANAGE\PROJECT_INFO.resx">
+      <DependentUpon>PROJECT_INFO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OFFER_MANAGE\PROJECT_INFOT.resx">
+      <DependentUpon>PROJECT_INFOT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OFFER_MANAGE\SAMPLE_RELY_LIST.resx">
+      <DependentUpon>SAMPLE_RELY_LIST.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OFFER_MANAGE\SAMPLE_RELY_LISTT.resx">
+      <DependentUpon>SAMPLE_RELY_LISTT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ORDER_MANAGE\INVENTORY.resx">
+      <DependentUpon>INVENTORY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ORDER_MANAGE\INVENTORYT.resx">
+      <DependentUpon>INVENTORYT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ORDER_MANAGE\INVOICE.resx">
+      <DependentUpon>INVOICE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ORDER_MANAGE\INVOICET.resx">
+      <DependentUpon>INVOICET.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ORDER_MANAGE\INVOICE_AND_RECEIVABLE.resx">
+      <DependentUpon>INVOICE_AND_RECEIVABLE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ORDER_MANAGE\NO_PAPER_OFFER.resx">
+      <DependentUpon>NO_PAPER_OFFER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ORDER_MANAGE\NO_PAPER_OFFERT.resx">
+      <DependentUpon>NO_PAPER_OFFERT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ORDER_MANAGE\PN_PRODUCTION_INSTRUCTIONS.resx">
+      <DependentUpon>PN_PRODUCTION_INSTRUCTIONS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ORDER_MANAGE\PN_PRODUCTION_INSTRUCTIONST.resx">
+      <DependentUpon>PN_PRODUCTION_INSTRUCTIONST.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ORDER_MANAGE\RECEIVABLE.resx">
+      <DependentUpon>RECEIVABLE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ORDER_MANAGE\RECEIVABLET.resx">
+      <DependentUpon>RECEIVABLET.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ORDER_MANAGE\SALES_AND_INVOICE.resx">
+      <DependentUpon>SALES_AND_INVOICE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource1.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="USER_MANAGE\EDIT_PWD.resx">
+      <DependentUpon>EDIT_PWD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="USER_MANAGE\EDIT_RIGHT.resx">
+      <DependentUpon>EDIT_RIGHT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="USER_MANAGE\LOGIN_INFO.resx">
+      <DependentUpon>LOGIN_INFO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="USER_MANAGE\USER_INFO.resx">
+      <DependentUpon>USER_INFO.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CSPSS_TemporaryKey.pfx" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Service References\ServiceReference1\service1.disco" />
+    <None Include="Service References\ServiceReference1\configuration91.svcinfo" />
+    <None Include="Service References\ServiceReference1\configuration.svcinfo" />
+    <None Include="Service References\ServiceReference1\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="bin\ICSharpCode.SharpZipLib.dll" />
+    <Content Include="bin\LOGIN_INFO.xml" />
+    <Content Include="bin\Microsoft.Office.Interop.Excel.dll" />
+    <Content Include="bin\Newtonsoft.Json.dll" />
+    <Content Include="bin\office.dll" />
+    <Content Include="bin\System.Web.dll" />
+    <Content Include="bin\Version.xml" />
+    <Content Include="bin\XizheC.dll" />
+    <Content Include="Image\1.png" />
+    <Content Include="Image\10.png" />
+    <Content Include="Image\11.png" />
+    <Content Include="Image\12.png" />
+    <Content Include="Image\13.png" />
+    <Content Include="Image\14.png" />
+    <Content Include="Image\15.png" />
+    <Content Include="Image\16.png" />
+    <Content Include="Image\17.png" />
+    <Content Include="Image\18.png" />
+    <Content Include="Image\19.png" />
+    <Content Include="Image\2.png" />
+    <Content Include="Image\20.png" />
+    <Content Include="Image\21.png" />
+    <Content Include="Image\22.png" />
+    <Content Include="Image\23.png" />
+    <Content Include="Image\24.png" />
+    <Content Include="Image\25.png" />
+    <Content Include="Image\26.png" />
+    <Content Include="Image\27.png" />
+    <Content Include="Image\28.png" />
+    <Content Include="Image\29.png" />
+    <Content Include="Image\3.png" />
+    <Content Include="Image\30.png" />
+    <Content Include="Image\31.png" />
+    <Content Include="Image\32.png" />
+    <Content Include="Image\33.png" />
+    <Content Include="Image\34.png" />
+    <Content Include="Image\35.png" />
+    <Content Include="Image\36.png" />
+    <Content Include="Image\3623424.png" />
+    <Content Include="Image\37.png" />
+    <Content Include="Image\38.png" />
+    <Content Include="Image\39.png" />
+    <Content Include="Image\4.png" />
+    <Content Include="Image\40.png" />
+    <Content Include="Image\41.png" />
+    <Content Include="Image\42.png" />
+    <Content Include="Image\43.png" />
+    <Content Include="Image\44.png" />
+    <Content Include="Image\45.png" />
+    <Content Include="Image\46.png" />
+    <Content Include="Image\47.png" />
+    <Content Include="Image\48.png" />
+    <Content Include="Image\49.png" />
+    <Content Include="Image\5.png" />
+    <Content Include="Image\50.png" />
+    <Content Include="Image\51.png" />
+    <Content Include="Image\52.png" />
+    <Content Include="Image\53.png" />
+    <Content Include="Image\54.png" />
+    <Content Include="Image\55.png" />
+    <Content Include="Image\56.png" />
+    <Content Include="Image\57.png" />
+    <Content Include="Image\6.png" />
+    <Content Include="Image\61.png" />
+    <Content Include="Image\7.png" />
+    <Content Include="Image\8.png" />
+    <Content Include="Image\9.png" />
+    <Content Include="Image\Audit.png" />
+    <Content Include="Image\btnAdd.png" />
+    <Content Include="Image\btnDelete.png" />
+    <Content Include="Image\btnExit.png" />
+    <Content Include="Image\btnSave.png" />
+    <Content Include="Image\btnSearch.png" />
+    <Content Include="Image\end_audit.png" />
+    <Content Include="Image\no_send_audit.png" />
+    <Content Include="Image\project_ms.png" />
+    <Content Include="Image\send_audit.png" />
+    <Content Include="Image\send_audit_1.png" />
+    <Content Include="Image\submit.png" />
+    <Content Include="Image\twinkle.ico" />
+    <Content Include="Image\wait_audit.png" />
+    <Content Include="Image\xz 200X200.ico" />
+    <Content Include="xz 200X200.ico" />
+    <None Include="Service References\ServiceReference1\service1.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ServiceReference1\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

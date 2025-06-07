@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{228A05BD-CF5F-47E6-9782-DD0E19483C6C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XizheC</RootNamespace>
+    <AssemblyName>XizheC</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <StartupObject>
+    </StartupObject>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\CSPSS\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <DocumentationFile>
+    </DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\CSPSS\bin\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="office, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\office.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\System.configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\System.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\System.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="basec.cs" />
+    <Compile Include="CARTIFICIAL.cs" />
+    <Compile Include="CAUDIT_LIST.cs" />
+    <Compile Include="CCOLOR.cs" />
+    <Compile Include="CCOLOR_PARAMETERS.cs" />
+    <Compile Include="CCUSTOMER_INFO.cs" />
+    <Compile Include="CDEPART.cs" />
+    <Compile Include="CDIE_CUTTING_COST.cs" />
+    <Compile Include="CDOOR_PARAMETERS.cs" />
+    <Compile Include="CEDIT_RIGHT.cs" />
+    <Compile Include="CEMPLOYEE_INFO.cs" />
+    <Compile Include="CFileInfo.cs" />
+    <Compile Include="CINVENTORY.cs" />
+    <Compile Include="CINVOICE.cs" />
+    <Compile Include="CINVOICE_AND_RECEIVALBE.cs" />
+    <Compile Include="CLAMINATING_PROCESS.cs" />
+    <Compile Include="CMACHINING.cs" />
+    <Compile Include="CMATERIAL_PRICE.cs" />
+    <Compile Include="CNOTICE_LIST.cs" />
+    <Compile Include="CNO_PAPER_OFFER.cs" />
+    <Compile Include="CORDER_TYPE.cs" />
+    <Compile Include="COTHER_COST.cs" />
+    <Compile Include="CPACK_MATERIAL.cs" />
+    <Compile Include="CPAPER_CORE.cs" />
+    <Compile Include="CPAPER_CORE_OPTION.cs" />
+    <Compile Include="CPARTS_AUXILIARY.cs" />
+    <Compile Include="CPN_PRODUCTION_INSTRUCTIONS.cs" />
+    <Compile Include="CPORTRAY.cs" />
+    <Compile Include="CPOSITION.cs" />
+    <Compile Include="CPRIMARY_COLORS.cs" />
+    <Compile Include="CPRINTING_MACHINE_SIZE.cs" />
+    <Compile Include="CPRINTING_OFFER.cs" />
+    <Compile Include="CPRINTING_TYPE.cs" />
+    <Compile Include="CPRINT_ARTIFICIAL.cs" />
+    <Compile Include="CPRINT_COST_TOTAL.cs" />
+    <Compile Include="CPRINT_DIE_CUTTING.cs" />
+    <Compile Include="CPRINT_OPTION.cs" />
+    <Compile Include="CPRINT_PACK_MATERIAL.cs" />
+    <Compile Include="CPRINT_PARTS_AUXILIARY.cs" />
+    <Compile Include="CPRINT_PORTRAY.cs" />
+    <Compile Include="CPRINT_PURCHASE.cs" />
+    <Compile Include="CPRINT_TRANSPORT.cs" />
+    <Compile Include="CPROCESSING_TECHNOLOGY.cs" />
+    <Compile Include="CPROJECT_INFO.cs" />
+    <Compile Include="CPURCHASE.cs" />
+    <Compile Include="CRECEIVABLE.cs" />
+    <Compile Include="CSALES_AND_INVOICE.cs" />
+    <Compile Include="CSAMPLE_RELY_LIST.cs" />
+    <Compile Include="CSURFACE_PROCESSING.cs" />
+    <Compile Include="CTISSUE_SPEC.cs" />
+    <Compile Include="CTRANSPORT.cs" />
+    <Compile Include="CUNIT.cs" />
+    <Compile Include="CUSER.cs" />
+    <Compile Include="CUSER_GROUP.cs" />
+    <Compile Include="EMPLOYEE_INFO.cs" />
+    <Compile Include="ExcelToCSHARP.cs" />
+    <Compile Include="IGETID.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="CSEND_MAIL.cs" />
+    <Compile Include="UploadFile.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AutoUpdater.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
