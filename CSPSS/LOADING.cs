@@ -28,7 +28,7 @@ namespace CSPSS
         basec bc = new basec();
         private void LOADING_Load(object sender, EventArgs e)
         {
-            /*this.Icon = new Icon(System.IO.Path.GetFullPath("Image/xz 200X200.ico"));
+            /*this.Icon = this.Icon = Resource1.xz_200X200;
             PictureBox pic = new PictureBox();
             pic.Image = Image.FromFile(System.IO.Path.GetFullPath("Image/loading.GIF"));
             pic.Size = new Size(32,32);

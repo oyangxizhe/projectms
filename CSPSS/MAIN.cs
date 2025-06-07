@@ -729,7 +729,7 @@ namespace CSPSS
              MenuItem s = new MenuItem("退出");
              c.MenuItems.Add(s);
              notifyIcon1.ContextMenu = c;
-             notifyIcon1.Icon = new Icon(System.IO.Path.GetFullPath("Image/xz 200X200.ico"));
+             notifyIcon1.Icon = this.Icon = Resource1.xz_200X200;
              s.Click += new EventHandler(notify_Click);
              this.Show();
 
@@ -790,14 +790,14 @@ namespace CSPSS
                          }
                          if (b == false)
                          {
-                             notifyIcon1.Icon = new Icon(System.IO.Path.GetFullPath("Image/xz 200X200.ico"));
+                             notifyIcon1.Icon = this.Icon = Resource1.xz_200X200;
                              notifyIcon1.ShowBalloonTip(30, string.Format("{0} 打样单号 {1} 已签核完毕", LOGIN.ENAME,SAMPLE_ID),
                                  "提醒", ToolTipIcon.Info );
                              b = true;
                          }
                          else
                          {
-                             notifyIcon1.Icon = new Icon(System.IO.Path.GetFullPath("Image/twinkle.ico"));
+                             notifyIcon1.Icon = Resource1.twinkle;
                              //notifyIcon1.ShowBalloonTip(30, "你好", "ok", ToolTipIcon.Info);
                              b = false;
                          }
@@ -838,7 +838,7 @@ namespace CSPSS
                          ID = dr["RIID"].ToString();
                          if (b == false)
                          {
-                             notifyIcon1.Icon = new Icon(System.IO.Path.GetFullPath("Image/xz 200X200.ico"));
+                             notifyIcon1.Icon = this.Icon = Resource1.xz_200X200;
                              if (dr["NOTICE_OR_AUDIT"].ToString () == "AUDIT")
                              {
                                  notifyIcon1.ShowBalloonTip(30, string.Format("{0} 订单编号 {1} 已新增完毕 需要你签核", LOGIN.ENAME, SAMPLE_ID),

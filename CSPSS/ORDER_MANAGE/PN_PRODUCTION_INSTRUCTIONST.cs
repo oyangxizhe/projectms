@@ -388,7 +388,7 @@ AND  EMID='" + LOGIN.EMID + "'");
                 textBox27.ScrollBars = ScrollBars.Both;
                 textBox27.BorderStyle = BorderStyle.FixedSingle;
 
-                //this.Icon = new Icon(System.IO.Path.GetFullPath("Image/xz 200X200.ico"));
+                //this.Icon = this.Icon = Resource1.xz_200X200;
                 dateTimePicker1.CustomFormat = "yyyy/MM/dd";
                 dateTimePicker1.Format = DateTimePickerFormat.Custom;
                 comboBox1.BackColor = CCOLOR.CUSTOMER_YELLOW;
